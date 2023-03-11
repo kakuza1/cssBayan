@@ -19,6 +19,15 @@ img {
     color: -webkit-link;
 }
 
+.memes-item:active .open {
+    border-color: transparent transparent -webkit-link transparent !important;
+}
+
+.memes-item:active img {
+    opacity: 0.7;
+}
+
+
 .memes-item:active label{
     color: -webkit-link !important;
 }
@@ -69,18 +78,18 @@ h1 {
 
 .content:hover .open {
     border-width: 0 5px 8px 5px;
-    border-color: transparent transparent #007bff transparent; 
+    border-color: transparent transparent #000000 transparent; 
 }
 
 .memes-input:checked ~ .open {
     border-width: 0 5px 8px 5px;
-    border-color: transparent transparent #007bff transparent;
+    border-color: transparent transparent #000000 transparent;
 }
 
 .open {
     border-style: solid;
     border-width: 8px 5px 0 5px;
-    border-color: #007bff transparent transparent transparent;
+    border-color: #000000 transparent transparent transparent;
     width: 0;
     height: 0;
     margin: 0 0 0 90%;
