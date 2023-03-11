@@ -55,12 +55,36 @@ img {
     cursor: pointer;
 }
 
+.memes:hover .open {
+    opacity: 1;
+}
+
 .wrapper {
     display: flex;
 }
 
 h1 {
     margin: 0 0 0 2%;
+}
+
+.content:hover .open {
+    border-width: 0 5px 8px 5px;
+    border-color: transparent transparent #007bff transparent; 
+}
+
+.memes-input:checked ~ .open {
+    border-width: 0 5px 8px 5px;
+    border-color: transparent transparent #007bff transparent;
+}
+
+.open {
+    border-style: solid;
+    border-width: 8px 5px 0 5px;
+    border-color: #007bff transparent transparent transparent;
+    width: 0;
+    height: 0;
+    margin: 0 0 0 90%;
+    opacity: 0;
 }
 
 label {
