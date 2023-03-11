@@ -1,10 +1,14 @@
+.content {
+    max-width: 75em;
+}
+
 .memes {
-    width: 31.25em;
-    margin: auto;
+    max-width: 43.75em;
+    margin: 0 auto
 }
 
 img {
-    max-width: 50%;
+    max-width: 70%;
     margin: auto;
     display: block ;
 }
@@ -17,6 +21,7 @@ img {
 
 .memes-title {
     color: -webkit-link;
+    font-size: 1.40em;
 }
 
 .memes-item:active .open {
@@ -98,4 +103,41 @@ h1 {
 
 label {
     cursor: pointer;
+}
+
+@media (max-width:1200px){
+    .content{
+        max-width: 970px;
+        font-size: .6em;
+    }
+    
+    img{
+        max-width: 40%;   
+    }
+    
+    .open{
+        margin: 0 0 0 70%;
+    }
+}
+
+@media (max-width:992px){
+    .content{
+        max-width: 750px;
+        font-size: .5em;
+    }
+    .open{
+        margin: 0 0 0 70%;
+    }
+    
+    img{
+        max-width: 20%;
+        margin: auto;
+    }
+}
+
+@media (max-width:767px){
+    .content{
+        max-width: none;
+        font-size: 0.5em;
+    }
 }
