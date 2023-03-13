@@ -4,7 +4,8 @@
 
 .memes {
     max-width: 43.75em;
-    margin: 0 auto
+    margin: 0 auto;
+    background-color: antiquewhite;
 }
 
 img {
@@ -50,15 +51,6 @@ img {
     cursor: pointer;
 }
 
-.memes:hover .memes-title {
-    color: black;
-    cursor: pointer;
-}
-
-.memes-input:checked ~ .memes-title {
-    color: black;
-}
-
 .memes-item {
     margin-bottom: 1em;
 }
@@ -73,64 +65,67 @@ img {
     opacity: 1;
 }
 
-.wrapper {
-    display: flex;
+.right, .open {
+    margin: 0 3%;
 }
 
 h1 {
     margin: 0 0 0 2%;
 }
 
-.content:hover .open {
-    border-width: 0 5px 8px 5px;
-    border-color: transparent transparent #000000 transparent; 
-}
-
-.memes-input:checked ~ .open {
-    border-width: 0 5px 8px 5px;
-    border-color: transparent transparent #000000 transparent;
+.content:hover .open,
+.memes-input:checked~.memes-title>.open {
+   transform: rotate(45deg);
 }
 
 .open {
-    border-style: solid;
-    border-width: 8px 5px 0 5px;
-    border-color: #000000 transparent transparent transparent;
-    width: 0;
-    height: 0;
-    margin: 0 0 0 90%;
-    opacity: 0;
+    display: inline-block;
+    transition: all .6s;
+    margin-right: 3%;
 }
 
 label {
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media (hover: none) and (pointer: coarse) {
+    
+}
+
+@media (min-width:1201px){
+    .memes:hover .memes-title {
+        color: black;
+        cursor: pointer;
+    }
+    
+    .content{
+        font-size: 1.4em;
+    }
+
+    .memes-input:checked ~ .memes-title {
+        color: black;
+    }
 }
 
 @media (max-width:1200px){
     .content{
-        max-width: 970px;
-        font-size: .6em;
+        font-size: 1.2em;
     }
     
     img{
-        max-width: 40%;   
-    }
-    
-    .open{
-        margin: 0 0 0 70%;
+        max-width: 80%;   
     }
 }
 
 @media (max-width:992px){
     .content{
-        max-width: 750px;
-        font-size: .5em;
-    }
-    .open{
-        margin: 0 0 0 70%;
+        font-size: 1em;
     }
     
     img{
-        max-width: 20%;
+        max-width: 80%;
         margin: auto;
     }
 }
@@ -138,6 +133,7 @@ label {
 @media (max-width:767px){
     .content{
         max-width: none;
-        font-size: 0.5em;
+        font-size: 0.8em;
     }
 }
+
