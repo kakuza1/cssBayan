@@ -1,0 +1,174 @@
+.content {
+    max-width: 75em;
+}
+
+.memes {
+    max-width: 43.75em;
+    margin: 0 auto;
+    background-color: antiquewhite;
+}
+
+img {
+    max-width: 70%;
+    margin: auto;
+    display: block ;
+}
+
+.memes-img {
+    opacity: 0;
+    max-width: 0%;
+    transition: all .7s;
+}
+
+.memes-title {
+    color: -webkit-link;
+    font-size: 1.40em;
+}
+
+.memes-item:active .open {
+    border-color: transparent transparent -webkit-link transparent !important;
+}
+
+.memes-item:active img {
+    opacity: 0.7;
+}
+
+
+.memes-item:active label{
+    color: -webkit-link !important;
+}
+
+.memes-input {
+    width: 0;
+    height: 0;
+    appearance: none;
+    cursor: pointer;
+}
+
+.memes-input:checked ~ .memes-img {
+    max-width: 100%;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.memes-item {
+    margin-bottom: 1em;
+}
+
+/* .memes-item:hover .memes-img {
+    max-width: 100%;
+    opacity: 1;
+    cursor: pointer;
+} */
+
+/* .memes:hover .open {
+    opacity: 1;
+} */
+
+.right, .open {
+    margin: 0 3%;
+}
+
+h1 {
+    margin: 0 0 0 2%;
+}
+
+.memes-input:checked~.memes-title>.open {
+   transform: rotate(45deg);
+}
+
+/* .content:hover .open {
+    transform: rotate(45deg);
+    opacity: 1;
+} */
+
+.open {
+    display: inline-block;
+    transition: all .6s;
+    margin-right: 3%;
+    /* opacity: 0; */
+}
+
+label {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (hover: hover) {
+    .content:hover .open {
+        transform: rotate(45deg);
+        opacity: 1;
+    }
+
+    .memes-item:hover .memes-img {
+        max-width: 100%;
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    .memes:hover .open {
+        opacity: 1;
+    }
+
+    .open {
+        display: inline-block;
+        transition: all .6s;
+        margin-right: 3%;
+        opacity: 0;
+    }
+
+    .memes:hover .memes-title {
+        color: black;
+        cursor: pointer;
+    }
+
+    .memes-input:checked ~ .memes-title {
+        color: black;
+    }
+}
+
+@media (min-width:1201px){
+    .memes:hover .memes-title {
+        color: black;
+        cursor: pointer;
+    }
+    
+    .content{
+        font-size: 1.4em;
+    }
+
+    .memes-input:checked ~ .memes-title {
+        color: black;
+    }
+}
+
+@media (max-width:1200px){
+    .content{
+        font-size: 1.2em;
+    }
+    
+    img{
+        max-width: 80%;   
+    }
+}
+
+@media (max-width:992px){
+    .content{
+        font-size: 1em;
+    }
+    
+    img{
+        max-width: 80%;
+        margin: auto;
+    }
+}
+
+@media (max-width:767px){
+    .content{
+        max-width: none;
+        font-size: 0.8em;
+    }
+}
+
