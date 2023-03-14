@@ -55,15 +55,15 @@ img {
     margin-bottom: 1em;
 }
 
-.memes-item:hover .memes-img {
+/* .memes-item:hover .memes-img {
     max-width: 100%;
     opacity: 1;
     cursor: pointer;
-}
+} */
 
-.memes:hover .open {
+/* .memes:hover .open {
     opacity: 1;
-}
+} */
 
 .right, .open {
     margin: 0 3%;
@@ -73,15 +73,20 @@ h1 {
     margin: 0 0 0 2%;
 }
 
-.content:hover .open,
 .memes-input:checked~.memes-title>.open {
    transform: rotate(45deg);
 }
+
+/* .content:hover .open {
+    transform: rotate(45deg);
+    opacity: 1;
+} */
 
 .open {
     display: inline-block;
     transition: all .6s;
     margin-right: 3%;
+    /* opacity: 0; */
 }
 
 label {
@@ -90,8 +95,38 @@ label {
     justify-content: space-between;
     align-items: center;
 }
-@media (hover: none) and (pointer: coarse) {
-    
+
+@media (hover: hover) {
+    .content:hover .open {
+        transform: rotate(45deg);
+        opacity: 1;
+    }
+
+    .memes-item:hover .memes-img {
+        max-width: 100%;
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    .memes:hover .open {
+        opacity: 1;
+    }
+
+    .open {
+        display: inline-block;
+        transition: all .6s;
+        margin-right: 3%;
+        opacity: 0;
+    }
+
+    .memes:hover .memes-title {
+        color: black;
+        cursor: pointer;
+    }
+
+    .memes-input:checked ~ .memes-title {
+        color: black;
+    }
 }
 
 @media (min-width:1201px){
